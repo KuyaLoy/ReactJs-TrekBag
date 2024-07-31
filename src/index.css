@@ -57,8 +57,8 @@ header {
   padding: 0 28px;
 }
 .item-list {
-  grid-column: 1/2;
-  grid-row: 2/3;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
   background-color: #fff;
   overflow-y: scroll;
   scrollbar-color: red orange;
@@ -70,11 +70,13 @@ header {
   width: 0;
   /* width: 8px; */
 }
+
 .item-list::-webkit-scrollbar-track {
   background: #faf7f3;
 }
+
 .item-list::-webkit-scrollbar-thumb {
-  background: #faf1ee;
+  background-color: #f3f1ee;
 }
 
 .item {
@@ -139,6 +141,18 @@ label > label {
 .item > button:hover,
 .item > button:focus {
   transform: scale(1.2);
+}
+
+.empty-state {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 5px;
 }
 
 .sidebar {
