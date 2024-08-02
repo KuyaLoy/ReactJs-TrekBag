@@ -214,6 +214,12 @@ form > input::placeholder {
   gap: 8px;
 }
 
+.sorting {
+  padding: 15px 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 13px;
+}
+
 h1 {
   font-size: 128px;
   font-weight: 600;
