@@ -64,7 +64,10 @@ export default function App() {
       <BackgroundHeading />
 
       <main>
-        <Header />
+        <Header
+          numberOfItemPacked={items.filter((item) => item.packed).length}
+          totalNumberOfItems={items.length}
+        />
         <ItemList
           items={items}
           handleDeleteItem={handleDeleteItem}
