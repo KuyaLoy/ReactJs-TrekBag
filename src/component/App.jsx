@@ -7,8 +7,6 @@ import Sidebar from "./Sidebar";
 import { initialItems } from "../lib/constants";
 
 export default function App() {
-  const itemsFromLocalStorage = JSON.parse(localStorage.getItem("items"));
-
   const [items, setItems] = useState(() =>
     JSON.parse(localStorage.getItem("items") || initialItems)
   );
