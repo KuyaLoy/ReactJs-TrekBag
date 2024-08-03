@@ -1,11 +1,14 @@
 import Button from "./Button";
 
-export default function ButtonGroup({
-  handleRemoveAllItems,
-  handleResetToInitial,
-  handleMarkAllAsComplete,
-  handleMarkAllAsIncomplete,
-}) {
+import { useItemsContext } from "../lib/hooks";
+
+export default function ButtonGroup() {
+  const {
+    handleMarkAllAsComplete,
+    handleMarkAllAsIncomplete,
+    handleResetToInitial,
+    handleRemoveAllItems,
+  } = useItemsContext();
   return (
     <section className="button-group">
       <Button buttonType="secondary" onClick={handleMarkAllAsComplete}>

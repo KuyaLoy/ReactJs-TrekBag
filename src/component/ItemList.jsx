@@ -3,14 +3,12 @@ import EmptyView from "./EmptyView";
 import { sortingOptions } from "../lib/constants";
 import { useMemo, useState } from "react";
 
-export default function ItemList({
-  items,
-  handleDeleteItem,
-  handleToggleItem,
-}) {
+import { useItemsContext } from "../lib/hooks";
+
+export default function ItemList() {
   const [sortBy, setSortBy] = useState("default");
 
-  useMemo(() => {}, []);
+  const { items, handleDeleteItem, handleToggleItem } = useItemsContext();
 
   const sortedItems = useMemo(
     () =>
